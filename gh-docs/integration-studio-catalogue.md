@@ -31,6 +31,57 @@ All the GMF related model files can be found at https://github.com/wso2/devstudi
 
 Finally, using the EEF framework, the Classes related to the Properties view are generated. The EEF model is deduced from the EMF model(.ecore file). The EEF model is hosted at https://github.com/rosensilva/devstudio-tooling-esb/blob/ec4f86d2a46bb23a6a1933b65bcf3e4603375253/plugins/org.wso2.developerstudio.eclipse.gmf.esb.edit/model/esb.components
 
+# Introduction to the repos
+
+## Integration Studio Kernel(https://github.com/wso2/developer-studio)
+
+
+WSO2 Developer Studio Kernel provides a set of common plugins, which can be used to develop Eclipse plugins for WSO2 products that are based on WSO2 Carbon platform. All the product specific plugins will use the Developer Studio Kernel as the base for their respective tooling implementation.
+
+#### Integration Studio kernel has following key capabilities
+
+* A UI toolkit that will generate UIs using XML instead of visually designing
+* A platform and a framework to use web technologies for plugin development
+* Large number of reusable built-in UI Component for plugin development (SWT Composites)
+* Built-in template support for rapid development
+* Provide Maven utilities to add maven support for developed plugins
+* Built in support for CApp and Carbon servers
+* Seamless integration with Eclipse, Developer Studio kernel and other plugin features using extension points
+
+## Integration Studio Platform(https://github.com/wso2/devstudio-tooling-platform)
+WSO2 Developer Studio Platform acts as a middle layer from Devleoper Studio Kernel to Developer Studio product Tooling by bridging the gap for carbon specific requirement implementation on top of Eclipse.
+
+#### WSO2 Developer Studio Platform has following key capabilities
+
+* Provide Maven utilities to add maven support for developed plugins
+* Built in support for CApp and Carbon servers
+* Seamless integration with Eclipse, Developer Studio kernel and other plugin features using extension points
+* Connectivity to Carbon Servers and WSO2 cloud
+* Developer Studio Platform will provide comprehensive support for developing tools and speedup the development process by providing generic Carbon based implementations and requirements.
+
+## ESB Tooling(https://github.com/wso2/devstudio-tooling-esb)
+WSO2 ESB tooling provides capabilities of a complete eclipse-based development environment for the ESB. You can develop services, features and artifacts as well as manage their links and dependencies through a simplified graphical editor via WSO2 ESB tooling. 
+#### WSO2 ESB Tooling has the following key capabilities
+* Develop ESB configurations (Proxy, API, Sequence, etc.) for the runtime
+* Debug ESB configurations using the mediation debugger
+* Mapping data across different formats using data mapper
+* Deploying ESB configurations directly to local and remote ESB instances
+* Provides a graphical editor to build ESB configurations in a drag and drop manner
+
+## DSS Tooling(https://github.com/wso2/devstudio-tooling-dss)
+WSO2 DSS tooling provides capabilities of a complete eclipse-based development environment for the DSS. You can develop dss artifacts through a simplified graphical editor via WSO2 DSS tooling.
+#### WSO2 DSS Tooling has following key capabilities
+Develop Data Services for the runtime Develop Data Source configurations Deploy DSS configurations directly to local and remote DSS instances Provides a graphical editor to develop Data Services configurations
+
+## BPS Tooling(https://github.com/wso2/devstudio-tooling-bps)
+BPS Tooling repo is maintained for the Business Process development of WSO2 Enterprise Integrator. Devstudio Tooling for BPS project contains two main components,
+* BPEL Editor
+* Human Task Editor
+
+## Integration Studio EI(https://github.com/wso2/devstudio-tooling-ei)
+Integration Studio EI contains the source code to create Eclipse RCP(Rich Client Application) for WSO2 Enterprise Integrator. This will package all the WSO2 Enterprise Integrator tooling plugins into one WSO2 branded eclipse based RCP application. Also, this will contain the packaging of third-party components such as Adopt OpenJDK, Maven, WSO2 Micro-integrator, WSO2 Monitoring dashbord, HTTP4e client, etc.
+
+
 
 ## Setting up Integration Studio for Developers
 1. Download [Eclipse IDE Oxygen IDE](https://www.eclipse.org/downloads/packages/release/oxygen/3a) based on the OS [Eclipse IDE for Java EE Developers]
@@ -110,5 +161,3 @@ Finally, using the EEF framework, the Classes related to the Properties view are
 
 * **[Important]** For macOS 
 Go to **Run -> Run configuration -> Select eclipse run configuration -> Select Arguments tab** and add **-nosplash** as an argument
-
-
